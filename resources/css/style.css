@@ -22,14 +22,22 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: auto 0;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
 }
 
 .site-container {
   display: flex;
-  width: 960px;
-  /*
+  flex-direction: column;
+  align-items: center;
+  /*max-width: 960px;*/
+  /* site-container needs max-width: 100%, margin: 0 auto to make everything responsive */
+  max-width: 100%;
   margin: 0 auto;
-  */
 }
 
 /*** Header and Navigation ***/
@@ -40,6 +48,11 @@ body {
   background-color: white;
   width: 100%;
   height: 2em;
+}
+
+.header-container {
+  display: flex;
+  width: 960px;
 }
 
 .site-branding {
@@ -80,4 +93,36 @@ nav a {
 nav li {
   display: inline-flex;
   margin-left: 1em;
+}
+
+
+/*** Main Content ***/
+
+/*** Top Banner Section - Learn Something New ***/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.featured-content {
+  width: 60%;
+}
+
+.side-container {
+  width: 40%;
+}
+
+/* This with site-container max-width: 100%, margin: 0 auto makes everything responsive */
+.featured-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/** SEEEEE **/
+.info-content img {
+  max-width: 100%;
+  height: auto;
 }
