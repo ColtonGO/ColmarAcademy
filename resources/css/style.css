@@ -26,7 +26,7 @@ body {
 
 .site-container {
   display: flex;
-  max-width: 960px;
+  width: 960px;
   /*
   margin: 0 auto;
   */
@@ -34,20 +34,31 @@ body {
 
 /*** Header and Navigation ***/
 
-.main-nav {
+.header {
   display: flex;
   justify-content: center;
   background-color: white;
   width: 100%;
   height: 2em;
-  border-bottom: 1px solid black;
 }
 
 .site-branding {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
+  margin-left: 1.5em;
   flex-grow: 1;
+  text-transform: uppercase;
+}
+
+.site-branding span {
+  color: hsla(0, 0%, 65%, 1);
+}
+
+span.bold {
+  font-weight: bold;
+  color: hsla(0, 0%, 35%, 1);
+  margin-right: 0.1em;
 }
 
 .nav-icon {
@@ -58,8 +69,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-right: 1.5em;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
 }
 
 nav li {
   display: inline-flex;
+  margin-left: 1em;
 }
