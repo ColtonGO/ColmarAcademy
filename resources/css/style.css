@@ -22,22 +22,27 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  margin: auto 0;
-}
-
-.main-content {
-  display: flex;
-  justify-content: center;
+  max-width: 960px;
+  /* Parent container needs "margin: auto" to make everything responsive, everything else needs to be a percentage*/
+  margin: auto;
 }
 
 .site-container {
   display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  /*max-width: 960px;*/
-  /* site-container needs max-width: 100%, margin: 0 auto to make everything responsive */
   max-width: 100%;
-  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*** Header and Navigation ***/
@@ -60,7 +65,8 @@ body {
   align-items: center;
   justify-content: flex-start;
   margin-left: 1.5em;
-  flex-grow: 1;
+  /*margin auto in a flex container will stretch to fill the container */
+  margin-right: auto;
   text-transform: uppercase;
 }
 
@@ -99,13 +105,6 @@ nav li {
 /*** Main Content ***/
 
 /*** Top Banner Section - Learn Something New ***/
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2em 0;
-}
 
 .featured-content {
   width: 60%;
