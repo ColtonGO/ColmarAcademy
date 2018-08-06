@@ -22,9 +22,26 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  color: hsla(0, 0%, 25%, 1);
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.67em 0;
+}
+
+h3 {
+  font-size: 1.125em;
+  font-weight: bold;
+  margin: 0.67em 0;
+}
+
+.test-container {
+  /*** Responsive Notes ***/
+  /* All elements; parent and child need to be fluid using max-width or width percentages. Margin 0 auto; comes in to play if the parent element isn't full screen and I want it's content centred. */
   max-width: 960px;
-  /* Parent container needs "margin: auto" to make everything responsive, everything else needs to be a percentage*/
-  margin: auto;
+  margin: 0 auto;
 }
 
 .site-container {
@@ -39,10 +56,29 @@ body {
   max-width: 100%;
 }
 
+/* Leaving a space in the class name in the index "banner container" allows you to separate the styles */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.featured-content {
+  width: 60%;
+  margin: 2em 1.5em;
+}
+
+.side-container {
+  width: 40%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsla(0, 100%, 100%, 1);
+  background-color: hsla(0, 0%, 25%, 1);
+  padding: 8px 0;
 }
 
 /*** Header and Navigation ***/
@@ -106,12 +142,8 @@ nav li {
 
 /*** Top Banner Section - Learn Something New ***/
 
-.featured-content {
-  width: 60%;
-}
-
-.side-container {
-  width: 40%;
+.banner {
+  background-color: hsla(0, 0%, 80%, 1);
 }
 
 /* This with site-container max-width: 100%, margin: 0 auto makes everything responsive */
@@ -120,8 +152,41 @@ nav li {
   height: auto;
 }
 
+.banner .content {
+  margin-right: 25%;
+}
+
+.banner p {
+  margin-bottom: 1.5em;
+}
+
+/* Information Section */
+
+.info-container {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.info-container .featured-content {
+  max-width: 35%;
+  margin: 0 0;
+}
+
+.content-container {
+  max-width: 65%;
+}
+
+.info-container .content {
+  max-width: 100%;
+}
+
 /** SEEEEE **/
-.info-content img {
+.info-container img {
   max-width: 100%;
   height: auto;
+}
+
+.info-container .content {
+  max-width: 65%;
 }
