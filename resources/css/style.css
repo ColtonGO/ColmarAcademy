@@ -22,19 +22,33 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 0.8125rem;
   color: hsla(0, 0%, 25%, 1);
+  line-height: 1.3rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: normal;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 0.67em 0;
+  margin: 0.6rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
 }
 
 h3 {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   font-weight: bold;
-  margin: 0.67em 0;
+  margin: 0.4rem 0;
 }
 
 .test-container {
@@ -60,25 +74,25 @@ h3 {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 2rem 0;
 }
 
 .featured-content {
   width: 60%;
-  margin: 2em 1.5em;
+  margin: 0 1.5rem;
 }
 
 .side-container {
   width: 40%;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
   color: hsla(0, 100%, 100%, 1);
   background-color: hsla(0, 0%, 25%, 1);
-  padding: 8px 0;
+  padding: 0.667rem;
+  border: none;
 }
 
 /*** Header and Navigation ***/
@@ -88,7 +102,7 @@ h3 {
   justify-content: center;
   background-color: white;
   width: 100%;
-  height: 2em;
+  height: 2rem;
 }
 
 .header-container {
@@ -100,7 +114,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 1.5em;
+  margin-left: 1.5rem;
   /*margin auto in a flex container will stretch to fill the container */
   margin-right: auto;
   text-transform: uppercase;
@@ -113,18 +127,18 @@ h3 {
 span.bold {
   font-weight: bold;
   color: hsla(0, 0%, 35%, 1);
-  margin-right: 0.1em;
+  margin-right: 0.1rem;
 }
 
 .nav-icon {
-  max-height: 2em;
+  max-height: 2rem;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 1.5em;
+  margin-right: 1.5rem;
 }
 
 nav a {
@@ -134,7 +148,7 @@ nav a {
 
 nav li {
   display: inline-flex;
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 
@@ -152,29 +166,53 @@ nav li {
   height: auto;
 }
 
+.banner .side-container {
+  display: flex;
+  align-items: center;
+}
+
 .banner .content {
   margin-right: 25%;
 }
 
 .banner p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
-/* Information Section */
+/*** Information Section ***/
+
+.information.container {
+  justify-content: flex-start;
+}
+
+.information .content h2 {
+  margin: 2rem 0 1.5rem 0;
+}
+
+blockquote footer {
+  margin-top: 1.5rem;
+}
 
 .info-container {
   display: inline-flex;
   align-items: center;
   max-width: 100%;
+  border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+}
+
+.first {
+  border-top: 1px solid hsla(0, 0%, 90%, 1);
 }
 
 .info-container .featured-content {
-  max-width: 35%;
-  margin: 0 0;
+  max-width: 30%;
+  margin: 1rem auto;
 }
 
 .content-container {
-  max-width: 65%;
+  display: flex;
+  align-items: center;
+  max-width: 60%;
 }
 
 .info-container .content {
@@ -187,6 +225,31 @@ nav li {
   height: auto;
 }
 
-.info-container .content {
-  max-width: 65%;
+a.read-more {
+  display: block;
+  margin: 0.4rem 0;
+  text-decoration: none;
+}
+
+/*** Courses Section ***/
+
+.courses.container {
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 95%, 1);
+}
+
+.courses .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course {
+  max-width: 25%;
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+.course img {
+  max-width: 100%;
+  height: auto;
 }
