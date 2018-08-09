@@ -95,6 +95,9 @@ button {
   border: none;
 }
 
+.title {
+  margin: 0 auto;
+}
 /*** Header and Navigation ***/
 
 .header {
@@ -242,14 +245,20 @@ a.read-more {
 .courses .container {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 3.5rem;
 }
 
 .course {
-  max-width: 25%;
+  max-width: 250px;
   background-color: hsla(0, 0%, 100%, 1);
+  margin: 1rem;
 }
 
 .course img {
   max-width: 100%;
   height: auto;
+}
+
+.course .content {
+  margin: 0 1.5rem 1.5rem 1.5rem;
 }
