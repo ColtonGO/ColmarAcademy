@@ -51,6 +51,11 @@ h3 {
   margin: 0.4rem 0;
 }
 
+a {
+  color: hsla(0, 0%, 50%, 1);
+  text-decoration: none;
+}
+
 .test-container {
   /*** Responsive Notes ***/
   /* All elements; parent and child need to be fluid using max-width or width percentages. Margin 0 auto; comes in to play if the parent element isn't full screen and I want it's content centred. */
@@ -68,6 +73,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   max-width: 100%;
+  margin-top: 2rem;
 }
 
 /* Leaving a space in the class name in the index "banner container" allows you to separate the styles */
@@ -98,6 +104,11 @@ button {
 .title {
   margin: 0 auto;
 }
+
+.title h2 {
+  margin: 0;
+}
+
 /*** Header and Navigation ***/
 
 .header {
@@ -106,6 +117,9 @@ button {
   background-color: white;
   width: 100%;
   height: 2rem;
+  border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+  position: fixed;
+  z-index: 1;
 }
 
 .header-container {
@@ -146,7 +160,6 @@ nav {
 
 nav a {
   color: black;
-  text-decoration: none;
 }
 
 nav li {
@@ -231,7 +244,6 @@ blockquote footer {
 a.read-more {
   display: block;
   margin: 0.4rem 0;
-  text-decoration: none;
 }
 
 /*** Courses Section ***/
@@ -245,13 +257,16 @@ a.read-more {
 .courses .container {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 3.5rem;
+  justify-content: space-between;
+  padding: 2rem 4.5rem 0 4.5rem;
 }
 
 .course {
   max-width: 250px;
   background-color: hsla(0, 0%, 100%, 1);
+  /*
   margin: 1rem;
+  */
 }
 
 .course img {
@@ -261,4 +276,50 @@ a.read-more {
 
 .course .content {
   margin: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/*** 4th Section - Thesis Exhibit ***/
+
+.exhibit.container {
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.exhibit video {
+  max-width: 100%;
+  height: auto;
+}
+
+.exhibit .featured-content h3 {
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+/*** Footer Section ***/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid hsla(0, 0%, 90%, 1);
+}
+
+.footer-container {
+  display: flex;
+  width: 960px;
+  margin: 1rem 1.5rem;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.conditions {
+  display: flex;
+  align-items: center;
+}
+
+.conditions li {
+  display: inline-flex;
+  margin-left: 0.5rem;
 }
