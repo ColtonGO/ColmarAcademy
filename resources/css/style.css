@@ -130,7 +130,6 @@ button {
 .site-branding {
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
   margin-left: 1.5rem;
   /*margin auto in a flex container will stretch to fill the container */
   margin-right: auto;
@@ -154,7 +153,6 @@ span.bold {
 nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   margin-right: 1.5rem;
 }
 
@@ -164,9 +162,43 @@ nav a {
 
 nav li {
   display: inline-flex;
+  align-items: center;
   margin-left: 1rem;
 }
 
+.mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .header {
+    height: 4rem;
+  }
+
+  .site-branding {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .mobile-nav ul {
+    display: inline-flex;
+  }
+
+  .mobile-nav li {
+    margin: 0 1.5rem;
+  }
+
+}
 
 /*** Main Content ***/
 
