@@ -14,7 +14,9 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/************************/
 /*** Universal Styles ***/
+/************************/
 
 html {
   font-size: 16px;
@@ -175,7 +177,9 @@ button {
 
 }
 
+/*****************************/
 /*** Header and Navigation ***/
+/*****************************/
 
 .header {
   display: flex;
@@ -266,9 +270,12 @@ nav li {
 
 }
 
+/********************/
 /*** Main Content ***/
-
+/********************/
+/************************************************/
 /*** Top Banner Section - Learn Something New ***/
+/************************************************/
 
 .banner {
   background-color: hsla(0, 0%, 80%, 1);
@@ -308,7 +315,9 @@ nav li {
 
 }
 
+/***************************/
 /*** Information Section ***/
+/***************************/
 
 .information.container {
   justify-content: flex-start;
@@ -368,6 +377,7 @@ a.read-more {
   .information.container {
     flex-direction: column;
     align-items: center;
+    border-bottom: 1px solid hsla(0, 0%, 90%, 1);
   }
 
   .info-container {
@@ -375,7 +385,7 @@ a.read-more {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+    border: none;
   }
 
   .info-featured {
@@ -400,16 +410,14 @@ a.read-more {
 
   .mobile-img {
     display: block;
-    /* This is key to getting image to maintain aspect ratio
-    object-fit: scale-down;
-    width: 100%;*/
   }
+
 
 }
 
-
-
+/***********************/
 /*** Courses Section ***/
+/***********************/
 
 .courses.container {
   display: flex;
@@ -460,10 +468,49 @@ a.read-more {
 
 @media only screen and (max-width: 530px) {
 
+  .courses.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    background-color: hsla(0, 0%, 100%, 1);
+    border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+  }
+
+  .courses.container .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 100%;
+    padding: 2rem 1rem 0 1rem;
+  }
+
+  .course {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    background-color: hsla(0, 0%, 100%, 1);
+    margin-bottom: 0.5rem;
+  }
+
+  .course .content {
+    margin: 0;
+    padding: 1rem 2rem;
+    background-color: hsla(0, 0%, 90%, 1);
+  }
+
+  .course img,
+  .course .content span,
+  .course .content p {
+    display: none;
+  }
 
 }
 
+/************************************/
 /*** 4th Section - Thesis Exhibit ***/
+/************************************/
 
 .exhibit.container {
   justify-content: flex-start;
@@ -479,7 +526,26 @@ a.read-more {
   margin: 1.5rem 0 0.5rem 0;
 }
 
+@media only screen and (max-width: 530px) {
+
+  .exhibit.container .container {
+    padding: 2rem 0 0 0;
+  }
+
+  .exhibit.container .side-container,
+  .exhibit.container .featured-content .content {
+    display: none;
+  }
+
+  .exhibit .featured-content {
+    margin: 0 1rem;
+  }
+
+}
+
+/**********************/
 /*** Footer Section ***/
+/**********************/
 
 .footer {
   display: flex;
@@ -507,4 +573,10 @@ a.read-more {
 .conditions li {
   display: inline-flex;
   margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 530px) {
+  .conditions {
+    display: none;
+  }
 }
