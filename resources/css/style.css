@@ -109,6 +109,72 @@ button {
   margin: 0;
 }
 
+@media only screen and (max-width: 740px) {
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.6rem 0;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+
+  h3 {
+    font-size: 1.0625rem;
+    font-weight: bold;
+    margin: 0.4rem 0;
+  }
+
+}
+
+@media only screen and (max-width: 635px) {
+
+  .featured-content {
+    width: 80%;
+  }
+
+  .side-container {
+    width: 80%;
+  }
+
+  .banner.container .side-container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 530px) {
+
+  .main-content {
+    margin-top: 4rem;
+  }
+
+  .featured-content {
+    width: 100%;
+  }
+
+  .side-container {
+    width: 95%;
+  }
+
+  .content {
+    width: 95%;
+  }
+
+  .featured-content .content {
+    margin: 0 auto;
+  }
+
+}
+
 /*** Header and Navigation ***/
 
 .header {
@@ -170,7 +236,7 @@ nav li {
   display: none;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 530px) {
 
   .header {
     height: 4rem;
@@ -227,6 +293,21 @@ nav li {
   margin-bottom: 1.5rem;
 }
 
+@media only screen and (max-width: 635px) {
+
+  .banner.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+}
+
+@media only screen and (max-width: 530px) {
+
+}
+
 /*** Information Section ***/
 
 .information.container {
@@ -252,7 +333,7 @@ blockquote footer {
   border-top: 1px solid hsla(0, 0%, 90%, 1);
 }
 
-.info-container .featured-content {
+.info-featured {
   max-width: 30%;
   margin: 1rem auto;
 }
@@ -278,6 +359,56 @@ a.read-more {
   margin: 0.4rem 0;
 }
 
+.mobile-img {
+  display: none;
+}
+
+@media only screen and (max-width: 530px) {
+
+  .information.container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+  }
+
+  .info-featured {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .info-container .content {
+    max-width: 100%;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+    /* This is key to getting image to maintain aspect ratio
+    object-fit: scale-down;
+    width: 100%;*/
+  }
+
+}
+
+
+
 /*** Courses Section ***/
 
 .courses.container {
@@ -286,7 +417,7 @@ a.read-more {
   background-color: hsla(0, 0%, 95%, 1);
 }
 
-.courses .container {
+.courses.container .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -296,9 +427,7 @@ a.read-more {
 .course {
   max-width: 250px;
   background-color: hsla(0, 0%, 100%, 1);
-  /*
-  margin: 1rem;
-  */
+  margin-bottom: 1rem;
 }
 
 .course img {
@@ -308,6 +437,30 @@ a.read-more {
 
 .course .content {
   margin: 0 1.5rem 1.5rem 1.5rem;
+}
+
+@media only screen and (max-width: 920px) {
+
+  .course {
+    max-width: 45%;
+    background-color: hsla(0, 0%, 100%, 1);
+    margin-bottom: 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 635px) {
+
+  .courses .container {
+    justify-content: space-around;
+    padding: 2rem 2rem 0 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 530px) {
+
+
 }
 
 /*** 4th Section - Thesis Exhibit ***/
