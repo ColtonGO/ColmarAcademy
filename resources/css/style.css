@@ -58,6 +58,16 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  font-weight: 700;
+  transition-property: font-weight;
+  transition-duration: 500ms;
+}
+
+a:visited {
+  font-style: italic;
+}
+
 .test-container {
   /*** Responsive Notes ***/
   /* All elements; parent and child need to be fluid using max-width or width percentages. Margin 0 auto; comes in to play if the parent element isn't full screen and I want it's content centred. */
@@ -94,13 +104,33 @@ a {
   width: 40%;
 }
 
-button {
-  font-family: 'Open Sans', sans-serif;
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   color: hsla(0, 100%, 100%, 1);
   background-color: hsla(0, 0%, 25%, 1);
   padding: 0.667rem;
   border: none;
+}
+
+.button:hover {
+  color: hsla(0, 0%, 15%, 1);
+  background-color: hsla(0, 0%, 60%, 1);
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-property: background-color;
+  transition-duration: 500ms;
+}
+
+.button:active {
+  color: hsla(0, 0%, 15%, 1);
+  background-color: hsla(0, 0%, 60%, 1);
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-property: background-color;
+  transition-duration: 500ms;
 }
 
 .title {
@@ -344,7 +374,7 @@ blockquote footer {
 
 .info-featured {
   max-width: 30%;
-  margin: 1rem auto;
+  margin: 1rem;
 }
 
 .content-container {
@@ -412,12 +442,15 @@ a.read-more {
     display: block;
   }
 
-
 }
 
 /***********************/
 /*** Courses Section ***/
 /***********************/
+
+a.test-course:hover {
+  background-color: hsla(230, 100%, 60%, 1)
+}
 
 .courses.container {
   display: flex;
@@ -434,8 +467,26 @@ a.read-more {
 
 .course {
   max-width: 250px;
+  color: hsla(0, 0%, 0%, 1);
   background-color: hsla(0, 0%, 100%, 1);
   margin-bottom: 1rem;
+}
+
+a.course:hover {
+  font-weight: 400;
+}
+
+.course:hover img{
+  opacity: 0.3;
+  transition-property: opacity;
+  transition-duration: 500ms;
+}
+
+.course-img {
+  background-image: url("../images/start-learning.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .course img {
@@ -492,6 +543,24 @@ a.read-more {
     max-width: 100%;
     background-color: hsla(0, 0%, 100%, 1);
     margin-bottom: 0.5rem;
+  }
+
+  .course .content:hover {
+    color: hsla(0, 0%, 90%, 1);
+    background-color: hsla(0, 0%, 60%, 1);
+    transition-property: color;
+    transition-duration: 500ms;
+    transition-property: background-color;
+    transition-duration: 500ms;
+  }
+
+  .course:active {
+    color: hsla(0, 0%, 90%, 1);
+    background-color: hsla(0, 0%, 60%, 1);
+    transition-property: color;
+    transition-duration: 500ms;
+    transition-property: background-color;
+    transition-duration: 500ms;
   }
 
   .course .content {
